@@ -6,7 +6,7 @@ import {
   FiAlertTriangle, FiClipboard, FiHome, FiCalendar, FiPlusCircle,
   FiMoreHorizontal, FiDollarSign
 } from 'react-icons/fi';
-import { GiSprout, GiSeedling, GiLeaf, GiWaterDrop, GiVirus } from 'react-icons/gi';
+import { GiSprout, GiSeedling, GiWaterDrop, GiVirus } from 'react-icons/gi';
 
 export default function Home() {
   return (
@@ -111,7 +111,7 @@ export default function Home() {
       {/* Middle Grid: Crop, Seeds & Market */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Top Crop Recommendation */}
-        <Card title="Top Crop Recommendation" action="View All Recommendations ➔" icon={<GiLeaf className="text-green-700" />}>
+        <Card title="Top Crop Recommendation" action="View All Recommendations ➔" icon={<GiSprout className="text-green-700" />}>
           <div className="flex items-center gap-4 bg-gray-50 rounded-2xl p-4 mb-4 border border-gray-100">
             <img 
               src="/images/crops/soybean.png" 

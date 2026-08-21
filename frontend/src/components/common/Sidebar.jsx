@@ -4,12 +4,12 @@ import {
   FiHome, FiSun, FiCheckSquare, FiTrendingUp, FiCalendar, 
   FiDollarSign, FiBell, FiMapPin, FiMic, FiUser, FiSettings, FiPhoneCall, FiActivity
 } from 'react-icons/fi';
-import { GiSprout, GiDna } from 'react-icons/gi';
+import { GiSprout, GiDna2 } from 'react-icons/gi';
 
 const MENU_ITEMS = [
   { id: 'home', label: 'Home', icon: <FiHome /> },
   { id: 'my-farm', label: 'My Farm', icon: <GiSprout /> },
-  { id: 'soil-health', label: 'Soil Health', icon: <GiDna /> },
+  { id: 'soil-health', label: 'Soil Health', icon: <GiDna2 /> },
   { id: 'weather', label: 'Weather', icon: <FiSun /> },
   { id: 'recommendations', label: 'Recommendations', icon: <FiCheckSquare /> },
   { id: 'market-prices', label: 'Market Prices', icon: <FiTrendingUp /> },
