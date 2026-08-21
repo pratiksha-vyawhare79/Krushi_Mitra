@@ -22,12 +22,14 @@ export default function Sidebar({ activeTab = 'home', onTabChange }) {
     <aside className="w-64 bg-white min-h-screen border-r border-gray-100 flex flex-col justify-between p-4 hidden lg:flex">
       <div>
         {/* Brand Logo */}
-        <div className="flex items-center gap-2 px-3 py-4 mb-6">
-          <div className="w-10 h-10 rounded-full bg-[#2E7D32] flex items-center justify-center text-white text-xl font-bold">
-            🌱
-          </div>
+        <div className="flex items-center gap-2 px-1 py-3 mb-6">
+          <img 
+            src="/logo/krushi-mitra-logo.png" 
+            alt="Krushi Mitra Logo" 
+            className="w-12 h-12 object-contain rounded-full shadow-sm"
+          />
           <div>
-            <h2 className="text-xl font-black text-[#2E7D32] tracking-wide flex items-center gap-1">
+            <h2 className="text-lg font-black text-[#2E7D32] tracking-wide flex items-center gap-0.5">
               कृषि <span className="text-[#66BB6A]">Mitra</span>
             </h2>
           </div>

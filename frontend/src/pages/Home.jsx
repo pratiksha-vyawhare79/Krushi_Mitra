@@ -8,7 +8,10 @@ export default function Home() {
       {/* Top Banner & Weather Panel */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Welcome Banner */}
-        <div className="lg:col-span-2 rounded-3xl p-8 relative overflow-hidden bg-gradient-to-br from-[#E2F0D9] to-[#C3E6B5] flex flex-col justify-between min-h-[220px] shadow-sm border border-green-200/50">
+        <div 
+          className="lg:col-span-2 rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between min-h-[220px] shadow-sm border border-green-200/50 bg-cover bg-center"
+          style={{ backgroundImage: "linear-gradient(to right, rgba(226, 240, 217, 0.95) 50%, rgba(226, 240, 217, 0.4)), url('/images/farmer_banner.png')" }}
+        >
           <div className="relative z-10 max-w-[65%]">
             <h2 className="text-3xl font-extrabold text-[#263238] leading-tight mb-2">
               Namaskar, किसान मित्र! 👋
@@ -29,11 +32,6 @@ export default function Home() {
                 📐 Total Area: 5.2 Acres
               </span>
             </div>
-          </div>
-
-          {/* Farmer Illustration Backdrop */}
-          <div className="absolute right-4 bottom-0 top-0 w-[35%] flex items-end justify-center select-none z-0">
-            <span className="text-[120px] filter drop-shadow-md leading-none">👨‍🌾</span>
           </div>
         </div>
 

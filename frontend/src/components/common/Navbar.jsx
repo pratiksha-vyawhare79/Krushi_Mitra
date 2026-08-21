@@ -47,9 +47,11 @@ export default function Navbar() {
             </p>
           </div>
           <div className="relative">
-            <div className="w-10 h-10 rounded-full bg-green-100 border border-green-200 overflow-hidden flex items-center justify-center font-bold text-green-800 text-sm">
-              🚜
-            </div>
+            <img 
+              src="/images/farmer.png" 
+              alt="Farmer Profile" 
+              className="w-10 h-10 rounded-full border border-green-200 object-cover shadow-sm"
+            />
             <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#43A047] border-2 border-white rounded-full"></span>
           </div>
         </div>
