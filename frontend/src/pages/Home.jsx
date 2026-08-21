@@ -2,36 +2,78 @@ import React from 'react';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
 
+// SVG Icons for Quick Actions
+const FileTextIcon = () => (
+  <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  </svg>
+);
+
+const LeafIcon = () => (
+  <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+);
+
+const RupeeIcon = () => (
+  <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 8h6m-6 4h6m-6 4h3m2.5-12h-5.5a3 3 0 00-3 3v10a3 3 0 003 3h5.5a3 3 0 003-3V7a3 3 0 00-3-3z" />
+  </svg>
+);
+
+const CameraIcon = () => (
+  <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+);
+
+const ChartIcon = () => (
+  <svg className="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+  </svg>
+);
+
 export default function Home() {
   return (
     <div className="space-y-6">
       {/* Top Banner & Weather Panel */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Welcome Banner */}
-        <div 
-          className="lg:col-span-2 rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between min-h-[220px] shadow-sm border border-green-200/50 bg-cover bg-center"
-          style={{ backgroundImage: "linear-gradient(to right, rgba(226, 240, 217, 0.95) 50%, rgba(226, 240, 217, 0.4)), url('/images/farmer_banner.png')" }}
-        >
-          <div className="relative z-10 max-w-[65%]">
-            <h2 className="text-3xl font-extrabold text-[#263238] leading-tight mb-2">
-              Namaskar, किसान मित्र! 👋
-            </h2>
-            <p className="text-sm text-gray-700 font-medium mb-6">
-              Let's make your farming smarter today.
-            </p>
+        <div className="lg:col-span-2 rounded-3xl relative overflow-hidden bg-[#F1F6EC] flex flex-col sm:flex-row justify-between min-h-[220px] shadow-sm border border-green-200/40">
+          <div className="p-8 flex-1 flex flex-col justify-between z-10">
+            <div>
+              <h2 className="text-3xl font-extrabold text-[#263238] leading-tight mb-2 flex items-center gap-2">
+                Namaskar, किसान मित्र! <span className="animate-bounce">👋</span>
+              </h2>
+              <p className="text-sm text-gray-600 font-medium mb-6">
+                Let's make your farming smarter today.
+              </p>
+            </div>
             
             {/* Metadata Pills */}
-            <div className="flex flex-wrap gap-2.5">
-              <span className="bg-white/80 backdrop-blur-sm border border-green-200/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-gray-700 shadow-sm flex items-center gap-1.5">
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-[#E4ECE0] px-3.5 py-1.5 rounded-full text-xs font-semibold text-gray-700 flex items-center gap-1.5">
                 📍 Pune, Maharashtra
               </span>
-              <span className="bg-white/80 backdrop-blur-sm border border-green-200/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-gray-700 shadow-sm flex items-center gap-1.5">
+              <span className="bg-[#E4ECE0] px-3.5 py-1.5 rounded-full text-xs font-semibold text-gray-700 flex items-center gap-1.5">
                 🚜 My Farms: 2
               </span>
-              <span className="bg-white/80 backdrop-blur-sm border border-green-200/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-gray-700 shadow-sm flex items-center gap-1.5">
+              <span className="bg-[#E4ECE0] px-3.5 py-1.5 rounded-full text-xs font-semibold text-gray-700 flex items-center gap-1.5">
                 📐 Total Area: 5.2 Acres
               </span>
             </div>
+          </div>
+
+          {/* Farmer photo overlay on the right */}
+          <div className="w-full sm:w-[45%] h-48 sm:h-auto relative overflow-hidden">
+            <img 
+              src="/images/farmer.png" 
+              alt="Farmer looking at phone" 
+              className="w-full h-full object-cover object-top"
+            />
+            {/* Fade effect between left card content and photo */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#F1F6EC] via-[#F1F6EC]/30 to-transparent pointer-events-none hidden sm:block"></div>
           </div>
         </div>
 
@@ -70,20 +112,22 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Quick Access Actions */}
+      {/* Quick Access Actions (Styled perfectly with SVGs and formal backgrounds) */}
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
         {[
-          { label: "Scan Soil Report", desc: "Get soil analysis", icon: "📄", color: "bg-green-50 text-green-700 border-green-200" },
-          { label: "Crop Recommendation", desc: "Find best crops", icon: "🌱", color: "bg-emerald-50 text-emerald-700 border-emerald-200" },
-          { label: "Market Prices", desc: "Check mandi rates", icon: "🪙", color: "bg-amber-50 text-amber-700 border-amber-200" },
-          { label: "Crop Health Scan", desc: "Detect diseases", icon: "📸", color: "bg-blue-50 text-blue-700 border-blue-200" },
-          { label: "What If Simulator", desc: "Compare scenarios", icon: "📊", color: "bg-purple-50 text-purple-700 border-purple-200" }
+          { label: "Scan Soil Report", desc: "Get soil analysis", icon: <FileTextIcon />, color: "bg-[#EBF7EE] text-green-800 border-green-200/50 hover:bg-[#deeed2]" },
+          { label: "Crop Recommendation", desc: "Find best crops", icon: <LeafIcon />, color: "bg-[#EBF7EE] text-emerald-800 border-emerald-200/50 hover:bg-[#deeed2]" },
+          { label: "Market Prices", desc: "Check mandi rates", icon: <RupeeIcon />, color: "bg-[#FEF5E7] text-amber-800 border-amber-200/50 hover:bg-[#fdf0d5]" },
+          { label: "Crop Health Scan", desc: "Detect diseases", icon: <CameraIcon />, color: "bg-[#EBF5FB] text-blue-800 border-blue-200/50 hover:bg-[#d6eaf8]" },
+          { label: "What If Simulator", desc: "Compare scenarios", icon: <ChartIcon />, color: "bg-[#F5EEF8] text-purple-800 border-purple-200/50 hover:bg-[#ebdef0]" }
         ].map((act, i) => (
           <div 
             key={i} 
-            className={`p-4 rounded-2xl border text-center cursor-pointer transition-all hover:scale-[1.03] hover:shadow-sm ${act.color}`}
+            className={`p-4 rounded-2xl border text-center cursor-pointer transition-all hover:scale-[1.03] hover:shadow-sm ${act.color} flex flex-col items-center justify-center`}
           >
-            <div className="text-3xl mb-2">{act.icon}</div>
+            <div className="p-3 bg-white rounded-full shadow-sm mb-3">
+              {act.icon}
+            </div>
             <h4 className="text-xs font-bold mb-0.5">{act.label}</h4>
             <p className="text-[10px] opacity-75">{act.desc}</p>
           </div>
@@ -95,9 +139,11 @@ export default function Home() {
         {/* Top Crop Recommendation */}
         <Card title="Top Crop Recommendation" action="View All Recommendations ➔" icon="🥬">
           <div className="flex items-center gap-4 bg-gray-50 rounded-2xl p-4 mb-4 border border-gray-100">
-            <div className="w-20 h-20 rounded-xl bg-green-100 flex items-center justify-center text-4xl shadow-inner border border-green-200">
-              🌱
-            </div>
+            <img 
+              src="/images/crops/soybean.png" 
+              alt="Soybean pods" 
+              className="w-20 h-20 rounded-xl object-cover shadow-sm border border-green-200"
+            />
             <div className="flex-1">
               <div className="flex justify-between items-start">
                 <h4 className="font-bold text-[#263238] text-lg">Soybean</h4>
@@ -112,10 +158,16 @@ export default function Home() {
             </div>
           </div>
 
-          <ul className="space-y-2 text-xs font-medium text-gray-600">
-            <li className="flex items-center gap-2">✓ Suitable for your soil</li>
-            <li className="flex items-center gap-2">✓ Good in current weather</li>
-            <li className="flex items-center gap-2">✓ High market demand</li>
+          <ul className="space-y-2 text-xs font-semibold text-gray-700">
+            <li className="flex items-center gap-2 text-green-800">
+              <span className="text-green-600">✔</span> Suitable for your soil
+            </li>
+            <li className="flex items-center gap-2 text-green-800">
+              <span className="text-green-600">✔</span> Good in current weather
+            </li>
+            <li className="flex items-center gap-2 text-green-800">
+              <span className="text-green-600">✔</span> High market demand
+            </li>
           </ul>
         </Card>
 
@@ -123,9 +175,11 @@ export default function Home() {
         <Card title="Recommended Seeds" action="View All" icon="🌾">
           <div className="space-y-4">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-xl bg-yellow-50 flex items-center justify-center text-3xl border border-yellow-200">
-                🥜
-              </div>
+              <img 
+                src="/images/seeds/soybean_seeds.png" 
+                alt="Soybean seeds" 
+                className="w-16 h-16 rounded-xl object-cover border border-yellow-200 shadow-sm"
+              />
               <div className="flex-1 text-xs">
                 <h4 className="font-bold text-gray-900 text-sm">JS 335 (Soybean)</h4>
                 <p className="text-gray-500 mt-1">Duration: 105-110 days</p>
