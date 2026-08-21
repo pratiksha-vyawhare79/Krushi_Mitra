@@ -1,4 +1,5 @@
 import React from 'react';
+import brandLogo from '../../assets/images/image.png';
 
 const MENU_ITEMS = [
   { id: 'home', label: 'Home', icon: '🏠' },
@@ -22,17 +23,12 @@ export default function Sidebar({ activeTab = 'home', onTabChange }) {
     <aside className="w-64 bg-white min-h-screen border-r border-gray-100 flex flex-col justify-between p-4 hidden lg:flex">
       <div>
         {/* Brand Logo */}
-        <div className="flex items-center gap-2 px-1 py-3 mb-6">
+        <div className="px-1 py-2 mb-6">
           <img 
-            src="/logo/krushi-mitra-logo.png" 
+            src={brandLogo} 
             alt="Krushi Mitra Logo" 
-            className="w-12 h-12 object-contain rounded-full shadow-sm"
+            className="w-full h-auto object-contain max-h-16"
           />
-          <div>
-            <h2 className="text-lg font-black text-[#2E7D32] tracking-wide flex items-center gap-0.5">
-              कृषि <span className="text-[#66BB6A]">Mitra</span>
-            </h2>
-          </div>
         </div>
 
         {/* Navigation list */}
