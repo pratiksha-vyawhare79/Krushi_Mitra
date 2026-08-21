@@ -1,38 +1,12 @@
 import React from 'react';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
-
-// SVG Icons for Quick Actions
-const FileTextIcon = () => (
-  <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-  </svg>
-);
-
-const LeafIcon = () => (
-  <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
-
-const RupeeIcon = () => (
-  <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 8h6m-6 4h6m-6 4h3m2.5-12h-5.5a3 3 0 00-3 3v10a3 3 0 003 3h5.5a3 3 0 003-3V7a3 3 0 00-3-3z" />
-  </svg>
-);
-
-const CameraIcon = () => (
-  <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-    <path strokeLinecap="round" strokeLinejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-  </svg>
-);
-
-const ChartIcon = () => (
-  <svg className="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-  </svg>
-);
+import { 
+  FiFileText, FiTrendingUp, FiCamera, FiBarChart2, FiSun, 
+  FiAlertTriangle, FiClipboard, FiHome, FiCalendar, FiPlusCircle,
+  FiMoreHorizontal, FiDollarSign
+} from 'react-icons/fi';
+import { GiSprout, GiSeedling, GiLeaf, GiWaterDrop, GiVirus } from 'react-icons/gi';
 
 export default function Home() {
   return (
@@ -112,14 +86,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Quick Access Actions (Styled perfectly with SVGs and formal backgrounds) */}
+      {/* Quick Access Actions */}
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
         {[
-          { label: "Scan Soil Report", desc: "Get soil analysis", icon: <FileTextIcon />, color: "bg-[#EBF7EE] text-green-800 border-green-200/50 hover:bg-[#deeed2]" },
-          { label: "Crop Recommendation", desc: "Find best crops", icon: <LeafIcon />, color: "bg-[#EBF7EE] text-emerald-800 border-emerald-200/50 hover:bg-[#deeed2]" },
-          { label: "Market Prices", desc: "Check mandi rates", icon: <RupeeIcon />, color: "bg-[#FEF5E7] text-amber-800 border-amber-200/50 hover:bg-[#fdf0d5]" },
-          { label: "Crop Health Scan", desc: "Detect diseases", icon: <CameraIcon />, color: "bg-[#EBF5FB] text-blue-800 border-blue-200/50 hover:bg-[#d6eaf8]" },
-          { label: "What If Simulator", desc: "Compare scenarios", icon: <ChartIcon />, color: "bg-[#F5EEF8] text-purple-800 border-purple-200/50 hover:bg-[#ebdef0]" }
+          { label: "Scan Soil Report", desc: "Get soil analysis", icon: <FiFileText className="w-6 h-6 text-green-700" />, color: "bg-[#EBF7EE] text-green-800 border-green-200/50 hover:bg-[#deeed2]" },
+          { label: "Crop Recommendation", desc: "Find best crops", icon: <GiSeedling className="w-6 h-6 text-emerald-700" />, color: "bg-[#EBF7EE] text-emerald-800 border-emerald-200/50 hover:bg-[#deeed2]" },
+          { label: "Market Prices", desc: "Check mandi rates", icon: <FiDollarSign className="w-6 h-6 text-amber-700" />, color: "bg-[#FEF5E7] text-amber-800 border-amber-200/50 hover:bg-[#fdf0d5]" },
+          { label: "Crop Health Scan", desc: "Detect diseases", icon: <FiCamera className="w-6 h-6 text-blue-700" />, color: "bg-[#EBF5FB] text-blue-800 border-blue-200/50 hover:bg-[#d6eaf8]" },
+          { label: "What If Simulator", desc: "Compare scenarios", icon: <FiBarChart2 className="w-6 h-6 text-purple-700" />, color: "bg-[#F5EEF8] text-purple-800 border-purple-200/50 hover:bg-[#ebdef0]" }
         ].map((act, i) => (
           <div 
             key={i} 
@@ -137,7 +111,7 @@ export default function Home() {
       {/* Middle Grid: Crop, Seeds & Market */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Top Crop Recommendation */}
-        <Card title="Top Crop Recommendation" action="View All Recommendations ➔" icon="🥬">
+        <Card title="Top Crop Recommendation" action="View All Recommendations ➔" icon={<GiLeaf className="text-green-700" />}>
           <div className="flex items-center gap-4 bg-gray-50 rounded-2xl p-4 mb-4 border border-gray-100">
             <img 
               src="/images/crops/soybean.png" 
@@ -172,7 +146,7 @@ export default function Home() {
         </Card>
 
         {/* Recommended Seeds */}
-        <Card title="Recommended Seeds" action="View All" icon="🌾">
+        <Card title="Recommended Seeds" action="View All" icon={<GiSeedling className="text-[#F9A825]" />}>
           <div className="space-y-4">
             <div className="flex items-center gap-4">
               <img 
@@ -200,7 +174,7 @@ export default function Home() {
         </Card>
 
         {/* Mandi Prices */}
-        <Card title="Today's Market Prices" action="View All" icon="💰">
+        <Card title="Today's Market Prices" action="View All" icon={<FiDollarSign className="text-green-700" />}>
           <div className="space-y-3">
             <div className="flex justify-between items-center text-xs">
               <div>
@@ -242,10 +216,10 @@ export default function Home() {
       {/* Bottom Grid: Risks & Calendar Tasks */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Risk Summary */}
-        <Card title="Risk Summary" action="View Details" icon="⚠️">
+        <Card title="Risk Summary" action="View Details" icon={<FiAlertTriangle className="text-amber-600" />}>
           <div className="grid grid-cols-2 gap-4">
             <div className="flex items-center gap-3 p-3 bg-red-50 rounded-2xl border border-red-100">
-              <span className="text-2xl">💧</span>
+              <span className="text-2xl text-red-600"><GiWaterDrop /></span>
               <div>
                 <h4 className="text-xs font-bold text-gray-900">Water Risk</h4>
                 <span className="text-[10px] bg-red-100 text-red-700 px-1.5 py-0.5 rounded font-bold">High</span>
@@ -253,7 +227,7 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-2xl border border-orange-100">
-              <span className="text-2xl">🐛</span>
+              <span className="text-2xl text-orange-600"><GiVirus /></span>
               <div>
                 <h4 className="text-xs font-bold text-gray-900">Disease Risk</h4>
                 <span className="text-[10px] bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded font-bold">Medium</span>
@@ -261,7 +235,7 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-3 p-3 bg-green-50 rounded-2xl border border-green-100">
-              <span className="text-2xl">☀️</span>
+              <span className="text-2xl text-green-600"><FiSun /></span>
               <div>
                 <h4 className="text-xs font-bold text-gray-900">Weather Risk</h4>
                 <span className="text-[10px] bg-green-100 text-green-700 px-1.5 py-0.5 rounded font-bold">Low</span>
@@ -269,7 +243,7 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-2xl border border-orange-100">
-              <span className="text-2xl">💰</span>
+              <span className="text-2xl text-amber-600"><FiDollarSign /></span>
               <div>
                 <h4 className="text-xs font-bold text-gray-900">Market Risk</h4>
                 <span className="text-[10px] bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded font-bold">Medium</span>
@@ -279,7 +253,7 @@ export default function Home() {
         </Card>
 
         {/* Today's Farm Tasks */}
-        <Card title="Today's Farm Tasks" action="View Calendar" icon="📋">
+        <Card title="Today's Farm Tasks" action="View Calendar" icon={<FiClipboard className="text-[#2E7D32]" />}>
           <ul className="space-y-3">
             {[
               { task: "Check soil moisture", when: "Today", checked: true },
@@ -313,22 +287,22 @@ export default function Home() {
       {/* Floating Bottom Navigation Bar (Mobile styling mockup) */}
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md px-6 py-2.5 rounded-full shadow-2xl border border-gray-100 flex items-center gap-8 md:hidden z-50">
         <button className="flex flex-col items-center text-[#2E7D32] gap-0.5">
-          <span className="text-lg">🏠</span>
+          <span className="text-lg"><FiHome /></span>
           <span className="text-[9px] font-bold">Home</span>
         </button>
         <button className="flex flex-col items-center text-gray-400 hover:text-[#2E7D32] gap-0.5">
-          <span className="text-lg">🚜</span>
+          <span className="text-lg"><GiSprout /></span>
           <span className="text-[9px] font-semibold">My Farm</span>
         </button>
         <div className="w-12 h-12 rounded-full bg-[#2E7D32] text-white flex items-center justify-center -translate-y-4 shadow-lg border-4 border-white select-none">
-          🌱
+          <FiPlusCircle className="w-6 h-6" />
         </div>
         <button className="flex flex-col items-center text-gray-400 hover:text-[#2E7D32] gap-0.5">
-          <span className="text-lg">📅</span>
+          <span className="text-lg"><FiCalendar /></span>
           <span className="text-[9px] font-semibold">Calendar</span>
         </button>
         <button className="flex flex-col items-center text-gray-400 hover:text-[#2E7D32] gap-0.5">
-          <span className="text-lg">⚙️</span>
+          <span className="text-lg"><FiMoreHorizontal /></span>
           <span className="text-[9px] font-semibold">More</span>
         </button>
       </div>
